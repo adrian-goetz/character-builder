@@ -2,14 +2,29 @@
 <html lang="en" ng-app="APP" ng-controller="mainCtrl">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/cb-style.css">
-		<title>Character Building</title>
+		<link rel="stylesheet" type="text/css" href="css/cb-style.css">
+		<title>Character Developer</title>
 	</head>
 	<body>
-		<h1>Hello</h1>
-		<p>Let's get started.</p>
+		<h1>Character Developer</h1>
+		<form>
+			<h2>Character name: 
+				<input type="text" name="char-name" ng-model="char.name"></input>
+				<!-- name generator -->
+			</h2>
+		</form>
+		<!-- basic info -->
+		<p>
+			Race: <span class="race">{{char.raceString}}</span>, 
+			Class: <span class="class">{{char.classString}}</span>, 
+			Background: <span class="background">{{char.backgroundString}}</span>
+		</p>
+
+		<!-- nav bar -->
+		<!-- editing window -->
+		<footer></footer>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
-	<script src="../js/my-angular.js"></script>
+	<script src="js/cb-angular.js"></script>
 </html>
